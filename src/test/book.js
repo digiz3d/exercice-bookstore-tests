@@ -64,7 +64,7 @@ describe("Tests d'intégration : Empty Database", () => {
             .end((err, res) => {
                 if (err) console.log(err);
                 expect(res).to.have.status(200);
-                expect(res.body.message).to.equals('book successfully added');
+                expect(res.body.message).to.equals('book successfull added'); //erreur ici
                 done();
             });
     });
