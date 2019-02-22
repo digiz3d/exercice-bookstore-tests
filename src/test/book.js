@@ -31,7 +31,7 @@ chai.use(chaiAsPromised);
 
 // fait les Tests d'integration en premier
 
-describe("Empty Database", () => {
+describe("Tests d'intégration : Empty Database", () => {
     beforeEach("reset database", () => {
         resetDatabase(path.join(__dirname, '../data/books.json'), initialStructure);
     });
@@ -70,7 +70,7 @@ describe("Empty Database", () => {
     });
 });
 
-describe("Mocked Database", () => {
+describe("Tests d'intégration : Mocked Database", () => {
     beforeEach("reset database", () => {
         resetDatabase(path.join(__dirname, '../data/books.json'), mockedDatabase);
     });
@@ -125,7 +125,7 @@ describe("Mocked Database", () => {
     });
 });
 
-describe("simulation de bonnes réponses de l'API", () => {
+describe("Tests unitaires : bonnes réponses de l'API", () => {
     beforeEach(() => {
         nock.cleanAll();
     });
@@ -210,7 +210,7 @@ describe("simulation de bonnes réponses de l'API", () => {
     });
 });
 
-describe("simulation de mauvaise réponses de l'API", () => {
+describe("Tests unitaires : mauvaises réponses de l'API", () => {
     beforeEach(() => {
         nock.cleanAll();
     });
