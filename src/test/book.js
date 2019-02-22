@@ -280,7 +280,7 @@ describe("simulation de mauvaise réponses de l'API", () => {
     it("DELETE /book/:id", done => {
         nock('http://localhost:8080')
             .delete('/book/testid')
-            .reply(666, { message: 'error deleting the book' });
+            .reply(400, { message: 'error deleting the book' });
 
         chai
             .request('http://localhost:8080')
